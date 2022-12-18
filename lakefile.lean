@@ -16,6 +16,10 @@ lean_exe «aoc01» { root := `Main01 }
 lean_exe «aoc02» { root := `Main02 }
 @[default_target]
 lean_exe «aoc03» { root := `Main03 }
+@[default_target]
+lean_exe «aoc04» { root := `Main04 }
+@[default_target]
+lean_exe «aoc05» { root := `Main05 }
 
 
 require std from git "https://github.com/leanprover/std4" @ "main"
