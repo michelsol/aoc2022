@@ -22,7 +22,10 @@ lean_exe «aoc04» { root := `Main04 }
 lean_exe «aoc05» { root := `Main05 }
 @[default_target]
 lean_exe «aoc06» { root := `Main06 }
+@[default_target]
+lean_exe «aoc07» { root := `Main07 }
 
 
 require std from git "https://github.com/leanprover/std4" @ "main"
 require mathlib from git "https://github.com/leanprover-community/mathlib4.git" @ "master"
+
