@@ -19,3 +19,4 @@ lean_exe «aoc03» { root := `Main03 }
 
 
 require std from git "https://github.com/leanprover/std4" @ "main"
+require mathlib from git "https://github.com/leanprover-community/mathlib4.git" @ "master"
