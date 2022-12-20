@@ -15,6 +15,28 @@ instance {l} [Foldr l] {α} [Add α] [Zero α] : Summable (l α) α where
 
 -- #eval Array.range 10 |> Summable.sum
 
+def RefArray (σ : Type) (α : Type) : Type :=
+  Array (ST.Ref σ α)
+
+def DynArray (σ : Type) (α : Type) : Type :=
+  ST.Ref σ (RefArray σ α)
+
+def RefArray.getArray {σ} {α} (a : RefArray σ α) : ST σ (Array α) :=
+  a.mapM ST.Ref.get
+
+def RefArray.setArray {σ} {α} (a : RefArray σ α) (x : Array α) : ST σ Unit :=
+  (a.zip x).forM (λ (s, v) => s.set v)
+
+def DynArray.getArray {σ} {α} (a : DynArray σ α) : ST σ (Array α) :=
+  a.get >>= RefArray.getArray
+
+def DynArray.push {σ} {α} (a : DynArray σ α) (v : α) : ST σ Unit := do
+  a.set <| (← a.get).push (← ST.mkRef v)
+
+def DynArray.pop {σ} {α} (a : DynArray σ α) : ST σ Unit := do
+  a.set <| (← a.get).pop
+
+
 namespace List
 def sum {α} [Add α] [Zero α] (l : List α) : α :=
   l.foldr (.+.) 0
