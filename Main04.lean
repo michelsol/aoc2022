@@ -27,7 +27,7 @@ def part2 (lines : Array String) :=
   x.sum
 
 def main : IO Unit := do
-  let lines ← IO.FS.lines "in04.txt"
+  let lines ← IO.FS.lines "data/in04.txt"
   IO.println s!"part1: {part1 lines}"
   IO.println s!"part2: {part2 lines}"
 

@@ -15,7 +15,7 @@ def part (lines : Array String) (n : Nat) : Nat :=
     unreachable!
 
 def main : IO Unit := do
-  let lines ← IO.FS.lines "in06.txt"
+  let lines ← IO.FS.lines "data/in06.txt"
   IO.println s!"part1: {part lines 4}"
   IO.println s!"part1: {part lines 14}"
 

@@ -53,7 +53,7 @@ def part2 (lines : Array String) : Nat :=
   (commonItems.map priority).sum
 
 def main : IO Unit := do
-  let lines ← IO.FS.lines "in03.txt"
+  let lines ← IO.FS.lines "data/in03.txt"
   IO.println s!"part1: {part1 lines}"
   IO.println s!"part2: {part2 lines}"
 

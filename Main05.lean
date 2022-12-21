@@ -50,7 +50,7 @@ def part2 (lines : Array String) : String :=
   String.mk <| (List.range stackCount).map λ stack => stacks[stack]!.back
 
 def main : IO Unit := do
-  let lines ← IO.FS.lines "in05.txt"
+  let lines ← IO.FS.lines "data/in05.txt"
   IO.println s!"part1: {part1 lines}"
   IO.println s!"part2: {part2 lines}"
 

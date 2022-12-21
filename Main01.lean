@@ -10,7 +10,7 @@ def part1and2 (lines : Array String) :=
   (answer1, answer2)
 
 def main : IO Unit := do
-  let lines ← IO.FS.lines "in01.txt"
+  let lines ← IO.FS.lines "data/in01.txt"
   IO.println s!"part1: {part1and2 lines}"
 
 -- #eval main

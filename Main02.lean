@@ -29,7 +29,7 @@ def part2 (lines : Array String) : Int :=
   scores.foldr Add.add 0
 
 def main : IO Unit := do
-  let lines ← IO.FS.lines "in02.txt"
+  let lines ← IO.FS.lines "data/in02.txt"
   IO.println s!"part1: {part1 lines}"
   IO.println s!"part2: {part2 lines}"
 

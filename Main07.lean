@@ -130,7 +130,7 @@ def part1and2 (lines : Array String) : IO Unit := do
   IO.println s!"{← root.findSmallestDirWithSizeGe (← root.totalSize.get)}"
 
 def main : IO Unit := do
-  let lines ← IO.FS.lines "in07.txt"
+  let lines ← IO.FS.lines "data/in07.txt"
   IO.println s!"part1 and 2: {← part1and2 lines}"
 
 -- #eval main
