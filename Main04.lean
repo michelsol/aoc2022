@@ -1,6 +1,6 @@
 import Aoc2022.Lib
 
-def part1 (lines : Array String) := 
+def part1 (lines : Array String) :=
   let x := lines.map λ line =>
     let t := line.splitOn ","
     let l := t[0]!.splitOn "-"
@@ -13,7 +13,7 @@ def part1 (lines : Array String) :=
     else 0
   x.sum
 
-def part2 (lines : Array String) := 
+def part2 (lines : Array String) :=
   let x := lines.map λ line =>
     let t := line.splitOn ","
     let l := t[0]!.splitOn "-"

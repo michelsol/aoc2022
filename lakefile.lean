@@ -26,6 +26,8 @@ lean_exe «aoc06» { root := `Main06 }
 lean_exe «aoc07» { root := `Main07 }
 @[default_target]
 lean_exe «aoc08» { root := `Main08 }
+@[default_target]
+lean_exe «aoc21» { root := `Main21 }
 
 require std from git "https://github.com/leanprover/std4" @ "bd60d932e2c786c7347e57576598568b2816e316"
 require Qq from git "https://github.com/gebner/quote4" @ "a387c0eb611857e2460cf97a8e861c944286e6b2"
