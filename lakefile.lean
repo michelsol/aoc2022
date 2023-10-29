@@ -27,7 +27,9 @@ lean_exe «aoc07» { root := `Main07 }
 @[default_target]
 lean_exe «aoc08» { root := `Main08 }
 
-
-require std from git "https://github.com/leanprover/std4" @ "main"
-require mathlib from git "https://github.com/leanprover-community/mathlib4.git" @ "master"
-
+require std from git "https://github.com/leanprover/std4" @ "bd60d932e2c786c7347e57576598568b2816e316"
+require Qq from git "https://github.com/gebner/quote4" @ "a387c0eb611857e2460cf97a8e861c944286e6b2"
+require aesop from git "https://github.com/JLimperg/aesop" @ "5e016236e9e699691aaa9872fa380df12cd7f677"
+require proofwidgets from git "https://github.com/EdAyers/ProofWidgets4" @ "f1a5c7808b001305ba07d8626f45ee054282f589"
+require Cli from git "https://github.com/mhuisi/lean4-cli" @ "39229f3630d734af7d9cfb5937ddc6b41d3aa6aa"
+require mathlib from git "https://github.com/leanprover-community/mathlib4" @ "b56efa53d7479fda9740f364170cbaef34699dee"
